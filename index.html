@@ -358,6 +358,34 @@
                 padding: 25px;
             }
         }
+        /* === הפרדה בין אייקוני הרשתות לבין השירותים === */
+        .section-divider {
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--hover-color));
+            margin: 50px auto;
+            border-radius: 50px;
+            animation: glowFlow 2s infinite alternate;
+        }
+
+        /* === אנימציה של קו זוהר דינמי === */
+        @keyframes glowFlow {
+            from {
+                box-shadow: 0 0 10px var(--primary-color);
+            }
+
+            to {
+                box-shadow: 0 0 20px var(--hover-color);
+            }
+        }
+
+        /* === כותרת ביניים מגניבה === */
+        .section-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--hover-color);
+            margin-top: 20px;
+        }
 
     </style>
 </head>
@@ -396,7 +424,7 @@
     </div>
 
 
-
+    <div class="section-divider"></div>
 
     <script>
         const canvas = document.getElementById("browsCanvas");
