@@ -4,17 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OR E - עיצוב גבות</title>
-     <link rel="snippet" type="text/html" href="https://noamrap.github.io/SNIPPEST/index.html">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const snippets = document.querySelectorAll("[data-snippet]");
-            for (const snippet of snippets) {
-                fetch(snippet.getAttribute("data-snippet"))
-                    .then(response => response.text())
-                    .then(html => snippet.innerHTML = html);
-            }
-        });
-    </script>
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
@@ -589,6 +579,17 @@
         </form>
 
     </div>
+          <link rel="snippet" type="text/html" href="https://noamrap.github.io/SNIPPEST/index.html">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const snippets = document.querySelectorAll("[data-snippet]");
+            for (const snippet of snippets) {
+                fetch(snippet.getAttribute("data-snippet"))
+                    .then(response => response.text())
+                    .then(html => snippet.innerHTML = html);
+            }
+        });
+    </script>
     <div class="privacy-policy">
         <p><a href="privacy-policy.html" target="_blank">📜 קרא את מדיניות הפרטיות שלנו</a></p>
     </div>
