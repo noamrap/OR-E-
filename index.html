@@ -410,7 +410,34 @@
                 transform: scale(1.1);
             }
 
+        /* === הפרדה בין אייקוני הרשתות לבין השירותים === */
+        .section-divider {
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--hover-color));
+            margin: 50px auto;
+            border-radius: 50px;
+            animation: glowFlow 2s infinite alternate;
+        }
 
+        /* === אנימציה של קו זוהר דינמי === */
+        @keyframes glowFlow {
+            from {
+                box-shadow: 0 0 10px var(--primary-color);
+            }
+
+            to {
+                box-shadow: 0 0 20px var(--hover-color);
+            }
+        }
+
+        /* === כותרת ביניים מגניבה === */
+        .section-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--hover-color);
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -446,7 +473,10 @@
             </a>
         </div>
     </div>
+    <div class="section-divider"></div>
 
+    <!-- כותרת ביניים מהממת -->
+    <h2 class="section-title">משפט כלשהו שיופיע פה</h2>
     <!-- מפת העסק - גוש חלב 3, ראשון לציון -->
     <div class="map-container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.442814022294!2d34.8232508!3d31.9634721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502a334b8f1e8cf%3A0x45a682cf4a9e47eb!2z15TXqNeV15nXqNeZIDMsINeQ15XXoNeV15w!5e0!3m2!1siw!2sil!4v1708600000000!5m2!1siw!2sil"
