@@ -358,34 +358,27 @@
                 padding: 25px;
             }
         }
-        /* === הפרדה בין אייקוני הרשתות לבין השירותים === */
-        .section-divider {
+        /* === אפקט גלים - מחבר בין הרשתות החברתיות לשירותים === */
+        .wave-divider {
+            position: relative;
             width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary-color), var(--hover-color));
-            margin: 50px auto;
-            border-radius: 50px;
-            animation: glowFlow 2s infinite alternate;
+            overflow: hidden;
+            line-height: 0;
+            margin-top: 40px;
         }
 
-        /* === אנימציה של קו זוהר דינמי === */
-        @keyframes glowFlow {
-            from {
-                box-shadow: 0 0 10px var(--primary-color);
+            /* צבע הגלים */
+            .wave-divider svg {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100px;
             }
 
-            to {
-                box-shadow: 0 0 20px var(--hover-color);
+            /* התאמת צבעים של הגלים */
+            .wave-divider .shape-fill {
+                fill: var(--light-gray);
             }
-        }
-
-        /* === כותרת ביניים מגניבה === */
-        .section-title {
-            font-size: 2.5em;
-            font-weight: 700;
-            color: var(--hover-color);
-            margin-top: 20px;
-        }
 
     </style>
 </head>
@@ -423,8 +416,12 @@
         </div>
     </div>
 
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="shape-fill" d="M0,64L48,96C96,128,192,192,288,186.7C384,181,480,107,576,106.7C672,107,768,181,864,202.7C960,224,1056,192,1152,160C1248,128,1344,96,1392,80L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
 
-    <div class="section-divider"></div>
 
     <script>
         const canvas = document.getElementById("browsCanvas");
